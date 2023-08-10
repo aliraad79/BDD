@@ -16,3 +16,14 @@ Feature: Calculator
 			| 1     | 12     | 13     |
 			| -1    | 6      | 5  	    |
 			| 2     | 2      | 4	    |
+
+	Scenario Outline: multiply two numbers
+		Given Three input values, <first> and <second> and <opt>
+		When I <opt> the two values
+		Then I expect the result <result>
+
+		Examples:
+			| first | second | opt | result |
+			| 6 | 2 | * | 12 |
+			| 6 | 2 | / | 3 |
+			| 6 | 2 | ^ | 36 |
